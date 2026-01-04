@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;AstroStar - Starless Transition Generator&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&amp;display=swap');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.glass-card {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(15, 23, 42, 0.8);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(16px);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 255, 255, 0.1);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.shimmer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-size: 200% 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: shimmer 2s infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.spinner {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top-color: #60a5fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: spin 0.8s linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes spin { to { transform: rotate(360deg); } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="text-slate-200 min-h-screen flex flex-col items-center justify-center p-6"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Background Glows --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="fixed inset-0 overflow-hidden -z-10 pointer-events-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px]"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-xl w-full glass-card p-8 rounded-[2rem] shadow-2xl relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute top-0 left-0 w-full h-1 shimmer"&gt;&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="text-center mb-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-3xl font-bold tracking-tight bg-gradient-to-br from-white to-slate-400 bg-clip-text text-transparent"&gt;AstroStar&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-slate-400 text-sm mt-2"&gt;Generate AI Star-to-Starless transitions&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 ml-1"&gt;Nebula or Galaxy Prompt&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input id="promptInput" type="text"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                       </span>placeholder="e.g. The Pillars of Creation in deep blue..."</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>class="w-full bg-slate-900/50 border border-slate-800 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all placeholder:text-slate-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="generateBtn" class="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-semibold py-4 rounded-2xl transition-all flex items-center justify-center gap-3 group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span id="btnText"&gt;Create Video&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;svg id="btnIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M5 12h14"/&gt;&lt;path d="m12 5 7 7-7 7"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Progress Indicator --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="statusArea" class="mt-10 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-end mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span id="statusText" class="text-xs font-medium text-blue-400"&gt;Initializing...&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span id="progressPercent" class="text-[10px] text-slate-500"&gt;0%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="progressBar" class="h-full bg-blue-500 w-0 transition-all duration-500"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Result Area --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="resultArea" class="mt-10 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="rounded-2xl overflow-hidden border border-slate-800 bg-black aspect-square mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;video id="outputVideo" controls class="w-full h-full"&gt;&lt;/video&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="downloadBtn" class="flex-1 bg-white text-black font-bold py-3 rounded-xl hover:bg-slate-200 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Download MP4</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="window.location.reload()" class="px-4 py-3 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/&gt;&lt;path d="M21 3v5h-5"/&gt;&lt;path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/&gt;&lt;path d="M3 21v-5h5"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="mt-10 text-slate-600 text-[10px] uppercase tracking-[0.3em] font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Deep Space AI Imaging</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const apiKey = ""; // Managed by environment</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const generateBtn = document.getElementById('generateBtn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const promptInput = document.getElementById('promptInput');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const statusArea = document.getElementById('statusArea');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const statusText = document.getElementById('statusText');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const progressBar = document.getElementById('progressBar');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const progressPercent = document.getElementById('progressPercent');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const resultArea = document.getElementById('resultArea');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const outputVideo = document.getElementById('outputVideo');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const downloadBtn = document.getElementById('downloadBtn');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function fetchImage(prompt) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const url = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const payload = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>instances: [{ prompt }],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>parameters: { sampleCount: 1 }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>let retryCount = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const maxRetries = 5;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>while (retryCount &lt; maxRetries) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const response = await fetch(url, {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>body: JSON.stringify(payload)</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (response.ok) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const data = await response.json();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return `data:image/png;base64,${data.predictions[0].bytesBase64Encoded}`;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (e) {}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const delay = Math.pow(2, retryCount) * 1000;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>await new Promise(r =&gt; setTimeout(r, delay));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>retryCount++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>throw new Error("API failed after retries.");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function setProgress(text, pct) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>statusText.innerText = text;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>progressBar.style.width = `${pct}%`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>progressPercent.innerText = `${pct}%`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function startGeneration() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const userPrompt = promptInput.value.trim() || "Deep space nebula with vibrant colorful dust clouds";</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>generateBtn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>statusArea.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resultArea.classList.add('hidden');</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Phase 1: Starry Image</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setProgress("Generating Star Field...", 20);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const starPrompt = `${userPrompt}, 8k astrophotography, pinpoint stars, realistic space photography, sharp focus`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const imgStarSrc = await fetchImage(starPrompt);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Phase 2: Starless Image</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setProgress("Removing Stars with AI...", 50);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const starlessPrompt = `${userPrompt}, starless nebula, no stars, pure cosmic dust clouds, smooth texture, professional star removal`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const imgStarlessSrc = await fetchImage(starlessPrompt);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Phase 3: Video Assembly</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setProgress("Synthesizing Transition...", 80);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const canvas = document.createElement('canvas');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>canvas.width = 1024;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>canvas.height = 1024;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const ctx = canvas.getContext('2d');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const loadImg = (src) =&gt; new Promise(res =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const img = new Image();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>img.crossOrigin = "anonymous";</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>img.onload = () =&gt; res(img);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>img.src = src;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const imgStar = await loadImg(imgStarSrc);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const imgStarless = await loadImg(imgStarlessSrc);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const stream = canvas.captureStream(30);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const recorder = new MediaRecorder(stream, {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>mimeType: 'video/webm;codecs=vp9',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>videoBitsPerSecond: 8000000<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const chunks = [];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>recorder.ondataavailable = e =&gt; chunks.push(e.data);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>recorder.onstop = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const blob = new Blob(chunks, { type: 'video/mp4' });</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const url = URL.createObjectURL(blob);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>outputVideo.src = url;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>downloadBtn.onclick = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const a = document.createElement('a');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>a.href = url;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>a.download = `astro_transition_${Date.now()}.mp4`;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>a.click();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>};</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setProgress("Complete!", 100);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>statusArea.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>resultArea.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>generateBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}, 500);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>recorder.start();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// 6 Second Animation Sequence</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const fps = 30;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const totalFrames = 6 * fps;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let frame = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>function animate() {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (frame &gt;= totalFrames) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>recorder.stop();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>ctx.clearRect(0, 0, 1024, 1024);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const progress = frame / totalFrames; // 0 to 1</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>let opacity = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Timeline:<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// 0-1.5s: Just stars</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// 1.5s-3s: Fade in starless</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// 3s-4.5s: Just starless</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// 4.5s-6s: Fade back to stars</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (progress &lt; 0.25) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>opacity = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else if (progress &lt; 0.5) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>opacity = (progress - 0.25) / 0.25;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else if (progress &lt; 0.75) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>opacity = 1;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>opacity = 1 - ((progress - 0.75) / 0.25);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>ctx.drawImage(imgStar, 0, 0, 1024, 1024);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>ctx.globalAlpha = opacity;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>ctx.drawImage(imgStarless, 0, 0, 1024, 1024);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>ctx.globalAlpha = 1.0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>frame++;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>requestAnimationFrame(animate);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>animate();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (err) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error(err);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>statusText.innerText = "Error: " + err.message;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>generateBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>generateBtn.addEventListener('click', startGeneration);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
